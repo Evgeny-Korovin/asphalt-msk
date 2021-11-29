@@ -42,12 +42,12 @@ h4 {
 }
 
 .menu-item {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
 }
 
 .menu-item:hover {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
     text-decoration: underline;
 }
@@ -62,9 +62,6 @@ section {
     margin-bottom: 50px;
 }
 
-.services img {
-   
-}
 
 .price-label  {
     font-weight: 700;
@@ -83,6 +80,7 @@ section {
 
 .price img {
     transform: rotate(-7deg);
+    width: 80%;
 }
 
 .price p {
@@ -105,7 +103,7 @@ section {
 }
 
 .letter-img {
-    height: 450px;
+    width: 100%;
 }
 
 .contact-wrap {
@@ -113,23 +111,45 @@ section {
     border-radius: 4px;
     padding: 15px 20px;
     background-color: rgb(245, 221, 2);
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .contact-wrap span {
     font-size: 32px;
     font-weight: 700;
+    height: 100%;
+    position: relative;
 }
 
 .icon-wrap {
+    position: relative;
+    left: -30px;
+    top: -30px;
     background-color: white;
     border: solid 1px #0f0f0f; 
-    width: 80px; 
-    height: 80px; 
+    width: 70px; 
+    height: 70px; 
     border-radius: 50%; 
     text-align: center; 
     display: flex; 
     align-items: center;
-    position: relative;
-    left: -40px;
-    top: -40px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+
+footer {
+    padding-top: 20px;
+}
+
+footer li {
+    list-style-type: none;
+}
+
+footer a {
+    text-decoration: none;
 }

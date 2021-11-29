@@ -48,7 +48,7 @@
                     <li class="bullet"><span>дистанционный расчет сметы за 1 час</span></li>
                 </ul>
                 <div class="mt-3">
-                  <a href="#" class="mainbtn btn btn-warning btn-lg shadow"><b>РАССЧИТАТЬ СТОИМОСТЬ</b></a>
+                  <a href="#" class="mainbtn btn btn-warning btn-lg shadow" data-bs-toggle="modal" data-bs-target="#mainmodal"><b>РАССЧИТАТЬ СТОИМОСТЬ</b></a>
                 </div>
             </div>
         </div>
@@ -59,18 +59,18 @@
         <h4 class="sec-header">Оказываем усуги предприятиям и частным лицам</h4>
         <div class="row">
           <div class="col-md-4">
-            <div class="card shadow m-3" style="">
+            <div class="card shadow m-3">
               <img src="img/way-building.jpg" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Строительство дорог</h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 <span class="price-label">от 600 руб./кв. м.</span>
-                <a href="#" class="btn btn-warning shadow">Подробнее</a>
+                <a href="#" class="btn btn-warning shadow" data-bs-toggle="build-modal" data-bs-target="#build-modal">Подробнее</a>
               </div>
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card shadow m-3" style="">
+            <div class="card shadow m-3">
               <img src="img/asphalt-building.jpg" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Асфальтирование</h5>
@@ -81,7 +81,7 @@
             </div>
           </div>
           <div class="col-md-4">
-            <div class="card shadow m-3" style="">
+            <div class="card shadow m-3">
               <img src="img/asphalt-remodeling.jpg" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Ремонт асфальта</h5>
@@ -99,11 +99,11 @@
       <div class="container">
         <div class="row">
           <div class="col-md-5 offset-md-1">
-            <img src="img/maket-kataloga.png" width="500" alt="" class="">
+            <img src="img/maket-kataloga.png" alt="" class="">
           </div>
           <div class="col-md-6">
             <h4 class="mt-5 w-50">Получить расценки на асфальтирование в Москве</h4>
-            <p class="mt-3">на 23.11.2021</p>
+            <p class="mt-3" id="nowdate">на сегодня</p>
             <a href="#" class="btn btn-warning btn-lg mt-5 shadow"><b>Получить прайс-лист</b></a>
           </div>
         </div>
@@ -239,9 +239,141 @@
     </section>
       
     <footer>
-
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-3 center">
+            <img src="img/logo-h.png"  width="150" height="50" alt="">
+          </div>
+          <div class="col-md-3 center">
+            <ul>
+              <li><b>Строительство дорог в Москве</b></li>
+              <li>ООО Асфальт</li>
+              <li>ИНН/КПП</li>
+              <li>ОГРН</li>
+               <li> г.Москва</p></li>
+            </ul>
+            
+            
+          </div>
+          <div class="col-md-3 center">
+            <ul>
+              <li class="menu-item"><a href="#">Главная</a></li>
+              <li class="menu-item"><a href="#">Услуги</a></li>
+              <li class="menu-item"><a href="#">Объекты</a></li>
+              <li class="menu-item"><a href="#">Контакты</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 center">
+            <ul>
+              <li><span class="phone"><i class="fas fa-phone-alt me-2"></i><a href="tel:+78008458989">8 800 845 89 89</a></span></li>
+              <li><b>Email:</b> asphalt@gmail.com</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </footer>
+
+    <!-- Start main modal form -->
+    <div class="modal fade" id="mainmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">ЗАЯВКА НА РАСЧЕТ СТОИМОСТИ</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form action="" method="POST" class="needs-validation" novalidate>
+              <div class="form-group">
+                <label for="name-input" class="form-label">Введите имя</label>
+              <input type="text" class="form-control" id="name-input" placeholder="" required>
+              </div>
+              <div class="form-group">
+                <label for="phone-input" class="form-label">Введите номер телефона</label>
+              <input type="tel" class="form-control" id="phone-input" placeholder="+7 (___) ___-__-__" required>
+              <div class="invalid-feedback">
+                Введите номер телефона.
+              </div>
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-warning">ОТРПРАВИТЬ ЗАЯВКУ</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End main modal form -->
+
+    <!-- Start way build modal form -->
+    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">ЗАЯВКА НА РАСЧЕТ СТОИМОСТИ</h5>
+            <p>строительство дорог</p>
+            <button type="button" class="btn-close" data-bs-dismiss="build-modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form action="" method="POST" class="needs-validation" novalidate>
+              <div class="form-group">
+                <label for="name-input" class="form-label">Введите имя</label>
+              <input type="text" class="form-control" id="name-input" placeholder="" required>
+              </div>
+              <div class="form-group">
+                <label for="phone-input" class="form-label">Введите номер телефона</label>
+              <input type="tel" class="form-control" id="phone-input" placeholder="+7 (___) ___-__-__" required>
+              <div class="invalid-feedback">
+                Введите номер телефона.
+              </div>
+              </div>
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-warning">ОТРПРАВИТЬ ЗАЯВКУ</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End way build modal form -->
+
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/650459f8ea.js" crossorigin="anonymous"></script>
+    <script>
+      var myModal = document.getElementById('myModal')
+      var myInput = document.getElementById('myInput')
+
+      myModal.addEventListener('shown.bs.modal', function () {
+        myInput.focus()
+      })
+    </script>
+    <script>
+      (function () {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.prototype.slice.call(forms)
+          .forEach(function (form) {
+            form.addEventListener('submit', function (event) {
+              if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+              }
+
+              form.classList.add('was-validated')
+            }, false)
+          })
+      })()
+    </script>
+    <script>
+      'use strict';
+      let elem = document.querySelector('#nowdate'),
+          date = new Date(),
+          nowdate = 'на ' + (date.getDate() > 9 ? date.getDate() : '0' + date.getDate())  + '.' + (date.getMonth() > 9 ? date.getMonth() : '0' + date.getMonth()) + '.' + date.getFullYear();
+          console.log(nowdate);
+          elem.innerHTML = nowdate;
+    </script>
 </body>
 </html>
