@@ -1,3 +1,11 @@
+body {
+    font-family:  sans-serif;
+}
+
+#fixed-phone {
+    display: none;
+}
+
 .main-section {
     min-height: 600px;
     padding: 150px 0 186px;
@@ -72,6 +80,11 @@ section {
     position: absolute; 
     right: 15px; 
     bottom: 10px;
+}
+
+#catalog-img {
+    display: block;
+    margin: 0 auto;
 }
 
 .price, .descr, .end-section  {
@@ -152,4 +165,9 @@ footer li {
 
 footer a {
     text-decoration: none;
+    color: black;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }

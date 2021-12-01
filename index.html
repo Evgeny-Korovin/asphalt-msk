@@ -7,6 +7,7 @@
     <title>Асфальтирование в Москве и Московской области</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
     <header>
@@ -16,8 +17,9 @@
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Переключатель навигации">
                 <span class="navbar-toggler-icon"></span>
               </button>
-              <span class="fs-5 ms-3">Строительство дорог в Москве и МО</span>
+              
               <div class="collapse navbar-collapse" id="navbarNav">
+                <span class="fs-5 ms-3" id="descriptor">Строительство дорог в Москве и МО</span>
                 <ul class="navbar-nav ms-5">
                   <li class="nav-item menu-item">
                     <a class="nav-link active" aria-current="page" href="#">Главная</a>
@@ -32,10 +34,12 @@
                     <a class="nav-link active" href="#">Контакты</a>
                   </li>
                 </ul>
+               
               </div>
               <span class="phone"><i class="fas fa-phone-alt me-2"></i><a href="tel:+78008458989">8 800 845 89 89</a></span>
             </div>
           </nav>
+          <div class="fixed-bottom"><a href="tel:+78008458989" class="btn btn-success" id="fixed-phone"><i class="fas fa-phone-alt me-2"></i>&nbsp;8 800 845 89 89</a></div>
     </header>
     <section class="main-section">
         <div class="container">
@@ -48,7 +52,7 @@
                     <li class="bullet"><span>дистанционный расчет сметы за 1 час</span></li>
                 </ul>
                 <div class="mt-3">
-                  <a href="#" class="mainbtn btn btn-warning btn-lg shadow" data-bs-toggle="modal" data-bs-target="#mainmodal"><b>РАССЧИТАТЬ СТОИМОСТЬ</b></a>
+                  <a href="#" class="mainbtn btn btn-warning btn-lg shadow" data-bs-toggle="modal" data-bs-target="#mainmodal" id="main-button"><b>РАССЧИТАТЬ СТОИМОСТЬ</b></a>
                 </div>
             </div>
         </div>
@@ -63,9 +67,9 @@
               <img src="img/way-building.jpg" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Строительство дорог</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                
                 <span class="price-label">от 600 руб./кв. м.</span>
-                <a href="#" class="btn btn-warning shadow" data-bs-toggle="build-modal" data-bs-target="#build-modal">Подробнее</a>
+                <a href="#" class="btn btn-warning shadow" data-bs-toggle="modal" data-bs-target="#build-modal">Подробнее</a>
               </div>
             </div>
           </div>
@@ -74,9 +78,9 @@
               <img src="img/asphalt-building.jpg" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Асфальтирование</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                
                 <span class="price-label">от 600 руб./кв. м.</span>
-                <a href="#" class="btn btn-warning shadow">Подробнее</a>
+                <a href="#" class="btn btn-warning shadow" data-bs-toggle="modal" data-bs-target="#asphalt-modal">Подробнее</a>
               </div>
             </div>
           </div>
@@ -85,9 +89,9 @@
               <img src="img/asphalt-remodeling.jpg" class="card-img-top" alt="...">
               <div class="card-body">
                 <h5 class="card-title">Ремонт асфальта</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                
                 <span class="price-label">от 600 руб./кв. м.</span>
-                <a href="#" class="btn btn-warning shadow">Подробнее</a>
+                <a href="#" class="btn btn-warning shadow" data-bs-toggle="modal" data-bs-target="#asphalt-renovation-modal">Подробнее</a>
               </div>
             </div>
           </div>
@@ -99,10 +103,10 @@
       <div class="container">
         <div class="row">
           <div class="col-md-5 offset-md-1">
-            <img src="img/maket-kataloga.png" alt="" class="">
+            <img src="img/maket-kataloga.png" alt="" id="catalog-img">
           </div>
           <div class="col-md-6">
-            <h4 class="mt-5 w-50">Получить расценки на асфальтирование в Москве</h4>
+            <h4 class="mt-5">Получить расценки на асфальтирование в Москве</h4>
             <p class="mt-3" id="nowdate">на сегодня</p>
             <a href="#" class="btn btn-warning btn-lg mt-5 shadow"><b>Получить прайс-лист</b></a>
           </div>
@@ -241,6 +245,10 @@
     <footer>
       <div class="container-fluid">
         <div class="row">
+          <div id="inline-footer-menu">
+            <span><a href="#">Главная</a> | <a href="#">Услуги</a> | <a href="#">Объекты</a> | <a href="#">Контакты</a></span>  
+          </div>
+          
           <div class="col-md-3 center">
             <img src="img/logo-h.png"  width="150" height="50" alt="">
           </div>
@@ -252,11 +260,10 @@
               <li>ОГРН</li>
                <li> г.Москва</p></li>
             </ul>
-            
-            
+           
           </div>
           <div class="col-md-3 center">
-            <ul>
+            <ul id="footer-menu">
               <li class="menu-item"><a href="#">Главная</a></li>
               <li class="menu-item"><a href="#">Услуги</a></li>
               <li class="menu-item"><a href="#">Объекты</a></li>
@@ -278,7 +285,7 @@
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">ЗАЯВКА НА РАСЧЕТ СТОИМОСТИ</h5>
+            <h5 class="modal-title" id="exampleModalLabel"><b>ЗАЯВКА НА РАСЧЕТ СТОИМОСТИ</b></h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -305,13 +312,12 @@
     <!-- End main modal form -->
 
     <!-- Start way build modal form -->
-    <div class="modal fade" id="modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="build-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">ЗАЯВКА НА РАСЧЕТ СТОИМОСТИ</h5>
-            <p>строительство дорог</p>
-            <button type="button" class="btn-close" data-bs-dismiss="build-modal" aria-label="Close"></button>
+            <h5 class="modal-title" id="exampleModalLabel"><b>ЗАЯВКА НА РАСЧЕТ СТОИМОСТИ</b></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
             <form action="" method="POST" class="needs-validation" novalidate>
@@ -326,6 +332,7 @@
                 Введите номер телефона.
               </div>
               </div>
+              <input type="hidden" value="Строительство дорог">
               <div class="modal-footer">
                 <button type="submit" class="btn btn-warning">ОТРПРАВИТЬ ЗАЯВКУ</button>
               </div>
@@ -335,6 +342,70 @@
       </div>
     </div>
     <!-- End way build modal form -->
+
+    <!-- Start asphalt modal form -->
+    <div class="modal fade" id="asphalt-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"><b>ЗАЯВКА НА РАСЧЕТ СТОИМОСТИ</b></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form action="" method="POST" class="needs-validation" novalidate>
+              <div class="form-group">
+                <label for="name-input" class="form-label">Введите имя</label>
+              <input type="text" class="form-control" id="name-input" placeholder="" required>
+              </div>
+              <div class="form-group">
+                <label for="phone-input" class="form-label">Введите номер телефона</label>
+              <input type="tel" class="form-control" id="phone-input" placeholder="+7 (___) ___-__-__" required>
+              <div class="invalid-feedback">
+                Введите номер телефона.
+              </div>
+              </div>
+              <input type="hidden" value="Строительство дорог">
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-warning">ОТРПРАВИТЬ ЗАЯВКУ</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End asphalt modal form -->
+
+    <!-- Start asphalt renovation modal form -->
+    <div class="modal fade" id="asphalt-renovation-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel"><b>ЗАЯВКА НА РАСЧЕТ СТОИМОСТИ</b></h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form action="" method="POST" class="needs-validation" novalidate>
+              <div class="form-group">
+                <label for="name-input" class="form-label">Введите имя</label>
+              <input type="text" class="form-control" id="name-input" placeholder="" required>
+              </div>
+              <div class="form-group">
+                <label for="phone-input" class="form-label">Введите номер телефона</label>
+              <input type="tel" class="form-control" id="phone-input" placeholder="+7 (___) ___-__-__" required>
+              <div class="invalid-feedback">
+                Введите номер телефона.
+              </div>
+              </div>
+              <input type="hidden" value="Строительство дорог">
+              <div class="modal-footer">
+                <button type="submit" class="btn btn-warning">ОТРПРАВИТЬ ЗАЯВКУ</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End asphalt renovation modal form -->
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/650459f8ea.js" crossorigin="anonymous"></script>
@@ -372,7 +443,6 @@
       let elem = document.querySelector('#nowdate'),
           date = new Date(),
           nowdate = 'на ' + (date.getDate() > 9 ? date.getDate() : '0' + date.getDate())  + '.' + (date.getMonth() > 9 ? date.getMonth() : '0' + date.getMonth()) + '.' + date.getFullYear();
-          console.log(nowdate);
           elem.innerHTML = nowdate;
     </script>
 </body>
